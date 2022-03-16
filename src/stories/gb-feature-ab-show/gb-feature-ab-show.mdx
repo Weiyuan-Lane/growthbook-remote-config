@@ -1,0 +1,41 @@
+# &lt;gb-feature-ab-show&gt;
+
+This component is used to identify if it should be shown, given some feature flag in [GrowthBook](https://www.growthbook.io/)
+
+It can be used in four different remote config types in GrowthBook. 
+- Simple - `string` value delivered to all users
+- Targeted - `string` value delivered to a targeted segment of users
+- Percentage Rollout - `string` values delivered to a percentage of users
+- A/B Experiment - `string` values delivered to a A/B/C/etc bucket of users
+
+Under any of the remote config above, the returned string value is matched against the variation key configured. If it matches, then the component is shown. This allows us to do A/B/C/D tests and easily which to show depending on the 4 different remote config methods in GrowthBook.
+
+### Example
+```html
+<gb-feature-ab-show
+  gb-feature-key="some-key"
+  [gb-default-val]="true"
+  gb-ab-variation-key="variation-key-a"
+>
+  <button>I am variation a button</button>  
+</gb-feature-ab-show>
+  
+<gb-feature-ab-show
+  gb-feature-key="some-key"
+  [gb-default-val]="false"
+  gb-ab-variation-key="variation-key-b"
+>
+  <button>I am variation b button</button>  
+</gb-feature-ab-show>
+```
+
+Of the components above, they both belong to the same feature/experiment, as identified by the feature key.
+
+If the retrieved value matches the variation key configured here, then the component will be shown, allowing you to configure the experiment on what to show and hide, for "A", "B", "C"... buckets.
+
+### Options
+|         Name        |                                        Description                                        | Default |
+|:--------------------|:------------------------------------------------------------------------------------------|:--------|
+| gb-feature-key      | Feature key that is used on GrowthBook                                                    | `""`    |
+| gb-ab-variation-key | Variation key value to be compared against the string value returned from the feature key | `""`    |
+| gb-default-val      | Default/fallback state of this component                                                  | `false` |

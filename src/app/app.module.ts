@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { API_KEY } from './constants';
+import { GrowthbookRemoteConfigModule } from './growthbook-remote-config/growthbook-remote-config.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GrowthbookRemoteConfigModule.forRoot({
+      apiKey: API_KEY,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,26 @@
+# &lt;gb-feature-text&gt;
+
+This component is used to apply some text to be read, given some feature value in [GrowthBook](https://www.growthbook.io/)
+
+It can be used in four different remote config types in GrowthBook. 
+- Simple - `string` value delivered to all users
+- Targeted - `string` value delivered to a targeted segment of users
+- Percentage Rollout - `string` values delivered to a percentage of users
+- A/B Experiment - `string` values delivered to a A/B/C/etc bucket of users
+
+Under any of the remote config above, the component will display the string value returned, allowing us to use this in versatile ways
+
+### Example
+```html
+<gb-feature-text
+  gb-feature-key="some-key"
+  gb-default-val="some-default">
+</gb-feature-text>
+```
+If `some-key` feature in GrowthBook is a valid feature key on GrowthBook, the retrieved string will be displayed. Else, the default value is shown instead.
+
+### Options
+| Name           | Description                              | Default |
+|:---------------|:-----------------------------------------|:--------|
+| gb-feature-key | Feature key that is used on GrowthBook   | `""`    |
+| gb-default-val | Default/fallback text to display         | `""`    |

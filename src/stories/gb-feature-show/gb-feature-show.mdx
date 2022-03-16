@@ -1,0 +1,27 @@
+# &lt;gb-feature-show&gt;
+
+This component is used to identify if it should be shown, given some feature flag in [GrowthBook](https://www.growthbook.io/)
+
+It can be used in four different remote config types in GrowthBook. 
+- Simple - `boolean` value delivered to all users
+- Targeted - `boolean` value delivered to a targeted segment of users
+- Percentage Rollout - `boolean` values delivered to a percentage of users
+- A/B Experiment - `boolean` values delivered to a A/B/C/etc bucket of users
+
+Under any of the remote config above, as long as a `true` value is returned, the component will be displayed, allowing us to use this in versatile ways
+
+### Example
+```html
+<gb-feature-show
+  gb-feature-key="some-key"
+  [gb-default-val]="true">
+  <button>Button Text Here</button>  
+</gb-feature-show>
+```
+If `some-key` feature in GrowthBook is configured to `true`, the above will be visible. Else, it will be hidden
+
+### Options
+| Name           | Description                              | Default |
+|:---------------|:-----------------------------------------|:--------|
+| gb-feature-key | Feature key that is used on GrowthBook   | `""`    |
+| gb-default-val | Default/fallback state of this component | `false` |
