@@ -7,6 +7,12 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,
+    "paths": {
+      "growthbook-remote-config": [
+        "dist/growthbook-remote-config/growthbook-remote-config",
+        "dist/growthbook-remote-config"
+      ]
+    },
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,

@@ -1,7 +1,42 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "growthbook-remote-config": {
+      "projectType": "library",
+      "root": "projects/growthbook-remote-config",
+      "sourceRoot": "projects/growthbook-remote-config/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/growthbook-remote-config/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/growthbook-remote-config/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/growthbook-remote-config/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/growthbook-remote-config/src/test.ts",
+            "tsConfig": "projects/growthbook-remote-config/tsconfig.spec.json",
+            "karmaConfig": "projects/growthbook-remote-config/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "growthbook-remote-config"
 }

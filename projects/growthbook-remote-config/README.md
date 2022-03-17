@@ -64,7 +64,6 @@ GrowthbookRemoteConfigModule.forRoot({
 
 See more on the usage of the module [here](https://weiyuan-lane.github.io/growthbook-remote-config)
 
-
 ## Release
 
 See more on instructions to release package [here](https://angular.io/guide/creating-libraries#publishing-your-library)

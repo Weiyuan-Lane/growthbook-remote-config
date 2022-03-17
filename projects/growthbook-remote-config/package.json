@@ -1,0 +1,17 @@
+{
+  "name": "growthbook-remote-config",
+  "version": "0.0.2",
+  "homepage": "https://weiyuan-lane.github.io/growthbook-remote-config",
+  "author": {
+    "name": "Liu Weiyuan",
+    "url": "https://weiyuan-lane.github.io/"
+  },
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "@growthbook/growthbook": "^0.17.0"
+  }
+}
