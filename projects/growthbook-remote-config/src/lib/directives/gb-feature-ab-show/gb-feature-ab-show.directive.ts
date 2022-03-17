@@ -38,7 +38,7 @@ export class GbFeatureAbShowDirective implements OnInit, OnDestroy, OnChanges {
   async verifyForUpdate(): Promise<void> {
     const featureVal = await this.growthbookSingletonService.evalFeature<string>(this.featureKey);
 
-    if (featureVal !== null && this.featureVal !== ''+featureVal) {
+    if (featureVal !== null) {
       this.featureVal = ''+featureVal;
       const show = this.abVariationKey === this.featureVal;
       this.updateView(show);
