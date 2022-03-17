@@ -17,14 +17,14 @@ Follow the instruction [here](https://docs.growthbook.io/app/api#creating-api-ke
 Install the module with `npm` or `yarn`
 
 ```bash
-npm i 
+npm i growthbook-remote-config
 ```
 
-Initialize this remote config module with the API key above
+Initialize this remote config module with the API key retrieved from above
 
 ```javascript
 // Import this module
-import { GrowthbookRemoteConfigModule } from './growthbook-remote-config/growthbook-remote-config.module';
+import { GrowthbookRemoteConfigModule } from 'growthbook-remote-config';
 
 @NgModule({
   declarations: [

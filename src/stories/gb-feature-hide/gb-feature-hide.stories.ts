@@ -1,7 +1,7 @@
 import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { API_KEY, DEFAULT_FEATURES_ENDPOINT } from 'src/app/constants';
-import { GrowthbookRemoteConfigModule } from 'src/app/growthbook-remote-config/growthbook-remote-config.module';
+import { GrowthbookRemoteConfigModule } from 'growthbook-remote-config';
 import GbFeatureHideComponent from './gb-feature-hide.component';
 import CustomDocumentation from './gb-feature-hide.mdx';
 

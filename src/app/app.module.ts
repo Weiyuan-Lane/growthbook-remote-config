@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { API_KEY } from './constants';
-import { GrowthbookRemoteConfigModule } from './growthbook-remote-config/growthbook-remote-config.module';
+import { GrowthbookRemoteConfigModule } from 'growthbook-remote-config';
 
 @NgModule({
   declarations: [

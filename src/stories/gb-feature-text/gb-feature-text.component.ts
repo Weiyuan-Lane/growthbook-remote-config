@@ -1,5 +1,5 @@
 import { Component, Input, SimpleChanges, OnChanges } from '@angular/core';
-import { GrowthbookSingletonService } from 'src/app/growthbook-remote-config/services/growthbook-singleton/growthbook-singleton.service';
+import { GrowthbookSingletonService } from 'growthbook-remote-config';
 
 @Component({
   selector: 'gb-feature-text-story',
