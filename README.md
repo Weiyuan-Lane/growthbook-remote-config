@@ -62,8 +62,7 @@ GrowthbookRemoteConfigModule.forRoot({
 
 ## Documentation
 
-See more on the usage of the module here
-
+See more on the usage of the module [here](https://weiyuan-lane.github.io/growthbook-remote-config)
 
 ## Release
 
