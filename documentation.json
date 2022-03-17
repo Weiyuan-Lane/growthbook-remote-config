@@ -852,16 +852,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/gb-feature-text/gb-feature-text.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<GbFeatureTextComponent>",
-                "defaultValue": "(args: GbFeatureTextComponent) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/gb-feature-hide/gb-feature-hide.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -877,6 +867,16 @@
                 "deprecationMessage": "",
                 "type": "Story<GbFeatureShowComponent>",
                 "defaultValue": "(args: GbFeatureShowComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/gb-feature-text/gb-feature-text.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<GbFeatureTextComponent>",
+                "defaultValue": "(args: GbFeatureTextComponent) => ({\n  props: args,\n})"
             },
             {
                 "name": "VariationAIsChosen",
