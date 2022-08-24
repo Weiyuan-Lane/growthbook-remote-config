@@ -1,5 +1,5 @@
 import { Inject, Injectable, InjectionToken } from '@angular/core';
-import { GrowthBook } from '@growthbook/growthbook';
+import { Experiment, GrowthBook, Result } from '@growthbook/growthbook';
 import { Subject, Subscription } from 'rxjs';
 
 const DEFAULT_FEATURES_ENDPOINT = 'https://cdn.growthbook.io/api/features';
@@ -8,7 +8,7 @@ export const GROWTHBOOK_CONFIG = new InjectionToken<GrowthbookConfig>('growthboo
 export interface GrowthbookConfig {
   apiKey: string;
   featuresEndpoint?: string;
-  trackingCallback?: Function
+  trackingCallback?: (experiment: Experiment<any>, result: Result<any>) => void
 }
 
 type FeatureValType = string | number | boolean | null;
