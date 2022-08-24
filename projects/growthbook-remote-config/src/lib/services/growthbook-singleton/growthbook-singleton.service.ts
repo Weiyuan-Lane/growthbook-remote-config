@@ -8,6 +8,7 @@ export const GROWTHBOOK_CONFIG = new InjectionToken<GrowthbookConfig>('growthboo
 export interface GrowthbookConfig {
   apiKey: string;
   featuresEndpoint?: string;
+  trackingCallback?: Function
 }
 
 type FeatureValType = string | number | boolean | null;
@@ -27,7 +28,9 @@ export class GrowthbookSingletonService {
   }
 
   async updateApiConfiguration(config: GrowthbookConfig): Promise<void> {
-    const growthbook = new GrowthBook();
+    const growthbook = new GrowthBook({
+      trackingCallback: config.trackingCallback,
+    });
     this.growthbookSingleton = new Promise<GrowthBook>((resolve, _) => {
       fetch(this.makeEndpointWithKey(config))
       .then((res) => res.json())
